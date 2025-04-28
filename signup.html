@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkillSwapConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4fc3f7;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #28a745;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #3da8d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+            padding: 4rem 0;
+        }
+
+        .auth-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 2.5rem;
+        }
+
+        .auth-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .auth-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-title p {
+            color: #6c757d;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+            outline: none;
+        }
+
+        .btn-block {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #6c757d;
+        }
+
+        .auth-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .skill-selection {
+            margin-top: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #e9f7fe;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-tag i {
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .auth-card {
+                padding: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>SkillSwapConnect</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="login.html" class="btn btn-outline">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-title">
+                    <h2>Create Your Account</h2>
+                    <p>Join our community of learners and teachers</p>
+                </div>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location (City)</label>
+                        <input type="text" id="location" class="form-control" placeholder="Enter your city" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Skills You Can Teach</label>
+                        <input type="text" id="teach-skills" class="form-control" placeholder="e.g., Web Development, Spanish, Guitar">
+                        <div class="skill-tags" id="teach-tags">
+                            <!-- Skill tags will be added here by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Skills You Want to Learn</label>
+                        <input type="text" id="learn-skills" class="form-control" placeholder="e.g., Graphic Design, French, Cooking">
+                        <div class="skill-tags" id="learn-tags">
+                            <!-- Skill tags will be added here by JavaScript -->
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block">Sign Up</button>
+                </form>
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SkillSwapConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple skill tag functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            function setupSkillInput(inputId, tagsId) {
+                const input = document.getElementById(inputId);
+                const tagsContainer = document.getElementById(tagsId);
+                
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ',') {
+                        e.preventDefault();
+                        const skill = input.value.trim();
+                        if (skill) {
+                            const tag = document.createElement('div');
+                            tag.className = 'skill-tag';
+                            tag.innerHTML = `${skill} <i class="fas fa-times"></i>`;
+                            tagsContainer.appendChild(tag);
+                            input.value = '';
+                            
+                            // Add click event to remove button
+                            tag.querySelector('i').addEventListener('click', function() {
+                                tag.remove();
+                            });
+                        }
+                    }
+                });
+            }
+            
+            setupSkillInput('teach-skills', 'teach-tags');
+            setupSkillInput('learn-skills', 'learn-tags');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile | SkillSwapConnect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f7fafc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .profile-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      padding: 32px;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    .profile-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      object-fit: cover;
+      border: 4px solid #6c63ff;
+    }
+    .profile-info h2 {
+      margin: 0 0 6px 0;
+      font-size: 2rem;
+      color: #6c63ff;
+    }
+    .profile-info p {
+      margin: 0;
+      color: #555;
+      font-size: 1.1rem;
+    }
+    .skills-section {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 24px;
+    }
+    .skills-list {
+      flex: 1;
+    }
+    .skills-list h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: #444;
+      letter-spacing: 0.5px;
+    }
+    .skills-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .skills-list li {
+      background: #f0f4ff;
+      color: #444;
+      padding: 7px 14px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .bio-section {
+      margin-bottom: 28px;
+    }
+    .bio-section h3 {
+      margin-bottom: 8px;
+      color: #444;
+    }
+    .bio-section p {
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      color: #333;
+      font-size: 1rem;
+      margin: 0;
+    }
+    .connections-section h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .connections-list {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .connection-card {
+      background: #f0f4ff;
+      border-radius: 10px;
+      padding: 10px 16px;
+      min-width: 120px;
+      text-align: center;
+      color: #555;
+      font-size: 0.98rem;
+      box-shadow: 0 1px 4px rgba(108,99,255,0.07);
+    }
+    .edit-btn {
+      margin-left: auto;
+      background: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .edit-btn:hover {
+      background: #554ee0;
+    }
+    @media (max-width: 600px) {
+      .profile-container {
+        padding: 12px;
+      }
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .skills-section {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img class="profile-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar">
+      <div class="profile-info">
+        <h2>Varad Barde</h2>
+        <p>Enthusiastic learner &amp; passionate teacher</p>
+        <p><strong>Location:</strong> Pune, India</p>
+      </div>
+      <button class="edit-btn">Edit Profile</button>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-list">
+        <h3>Skills I Can Teach</h3>
+        <ul>
+          <li>Web Development</li>
+          <li>Public Speaking</li>
+          <li>Backend development</li>
+        </ul>
+      </div>
+      <div class="skills-list">
+        <h3>Skills I Want to Learn</h3>
+        <ul>
+          <li>Graphic Design</li>
+          <li>Photography</li>
+          <li>Urdu Language</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bio-section">
+      <h3>About Me</h3>
+      <p>
+        Hi! I'm Varad Barde, a web developer who loves helping others learn new skills. I believe everyone has something valuable to share. Let's connect and grow together!
+      </p>
+    </div>
+
+    <div class="connections-section">
+      <h3>Recent Skill Partners</h3>
+      <div class="connections-list">
+        <div class="connection-card">Rutuja Vaidya (Graphic Design)</div>
+        <div class="connection-card">Jay Jadhav (Urdu)</div>
+        <div class="connection-card">Meera Kaif (Photography)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
